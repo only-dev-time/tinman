@@ -10,6 +10,8 @@ name = "pypi"
 ijson = "*"
 yajl-py = "*"
 cffi = "*"
+flask = "*"
+wtforms = "*"
 
 [dev-packages]
 

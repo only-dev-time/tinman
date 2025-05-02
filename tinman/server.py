@@ -11,7 +11,7 @@ import time
 import datetime
 
 from flask import Flask, render_template, flash, request
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+from wtforms import Form, TextAreaField, validators, StringField, SubmitField
 from binascii import hexlify, unhexlify
 
 from simple_steem_client.client import SteemRemoteBackend, SteemInterface, SteemRPCException
@@ -19,7 +19,7 @@ from simple_steem_client.client import SteemRemoteBackend, SteemInterface, Steem
 from . import submit
 
 class ReusableForm(Form):
-    new_account_name = TextField('New Account Name:', validators=[validators.required()])
+    new_account_name = StringField('New Account Name:', validators=[validators.DataRequired()])
 
 def main(argv):
     parser = argparse.ArgumentParser(prog=argv[0], description="Web Server")
