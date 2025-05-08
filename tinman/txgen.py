@@ -331,7 +331,7 @@ def update_accounts(account_stats, conf, keydb, silent=True):
               "owner" : new_owner_auth,
               "active" : new_active_auth,
               "posting" : new_posting_auth,
-              "memo_key" : "TST"+a["memo_key"][3:],
+              "memo_key" : steem_address_prefix + a["memo_key"][3:],
               "json_metadata" : a["json_metadata"],
               }}]
 
